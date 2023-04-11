@@ -11,7 +11,21 @@
 		function secondHighest(arr) {
 			//Write your code here
 			
-		}
+  let large = -1;
+  let secondLarge = -1;
+  if(arr.length==0 || arr.length ==1){
+    secondLarge = -Infinity;
+  }else{
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>large){
+      secondLarge = large;
+      large = arr[i]
+    }
+  }
+  }
+  return secondLarge;
+}
+			
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
